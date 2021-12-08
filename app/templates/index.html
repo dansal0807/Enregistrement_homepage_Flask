@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+        {% if title %}
+        <title>{{ title }}</title>
+        {% else %}
+        <title> Bem-Vindo! </title>
+        {% endif %}
+    </head>
+    <body>
+        <h1>Hello, {{ user.username }}!</h1>
+    </body>
+{% endblock %}
+</html>
