@@ -7,6 +7,14 @@ form {
     border-radius: 1em;
 }
 
+.cadastro_user {
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;    
+}
+
 form div + div {
     margin-top: 1em;
 }

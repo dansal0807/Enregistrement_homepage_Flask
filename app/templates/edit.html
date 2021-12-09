@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="" method="post">
+    <form action="" method="post" novalidate>
+        
+        <p> Editar Perfil: </p>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.username.label }}<br>
+            {{ form.username(size=32) }}
+        </p>
+        <p>
+            {{ form.email.label }}<br>
+            {{ form.email(size=32) }}
+        </p>
+        <p>
+            {{ form.cpf.label }}<br>
+            {{ form.cpf(size=32) }}
+        </p>
+        <p>
+            {{ form.pis.label }}<br>
+            {{ form.pis()}}
+        </p>
+        <p>Endereço:</p>
+        <p>
+            {{ form.pais.label }}<br>
+            {{ form.pais(size=32) }}
+        </p>
+        <p>
+            {{ form.cep.label }}<br>
+            {{ form.cep(size=32) }}
+        </p>
+        <p>
+            {{ form.estado.label }}<br>
+            {{ form.estado(size=32) }}
+        </p>
+        <p>
+            {{ form.cidade.label }}<br>
+            {{ form.cidade(size=32) }}
+        </p>
+        <p>
+            {{ form.rua.label }}<br>
+            {{ form.rua(size=32) }}
+        </p>
+        <p>
+            {{ form.numero.label }}<br>
+            {{ form.numero(size=32) }}
+        </p>
+        <p>
+            {{ form.complemento.label }}<br>
+            {{ form.complemento(size=32)}}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}

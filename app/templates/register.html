@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Formulário de Registro</h1>
+
     <form action="" method="post">
+        <h1>Olá, visitante! Seja bem-vindo(a)! </h1>
+        <h2>Formulário de Registro</h2>
         {{ form.hidden_tag() }}
         <p>
             {{ form.username.label }}<br>
@@ -32,12 +34,69 @@
             <span style="color: red;">[{{ error }}]</span>
             {% endfor %}
         </p>
+        <p> Endereço:</p>
+        <p>
+            {{ form.pais.label }}<br>
+            {{ form.pais(size=32) }}<br>
+            {% for error in form.pais.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.cep.label }}<br>
+            {{ form.cep(size=32) }}<br>
+            {% for error in form.cep.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.estado.label }}<br>
+            {{ form.estado(size=32) }}<br>
+            {% for error in form.estado.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.cidade.label }}<br>
+            {{ form.cidade(size=32) }}<br>
+            {% for error in form.cidade.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.rua.label }}<br>
+            {{ form.rua(size=32) }}<br>
+            {% for error in form.rua.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.numero.label }}<br>
+            {{ form.numero(size=32) }}<br>
+            {% for error in form.numero.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.complemento.label }}<br>
+            {{ form.complemento(size=32) }}<br>
+            {% for error in form.complemento.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
         <p>
             {{ form.password.label }}<br>
             {{ form.password(size=32) }}<br>
             {% for error in form.password.errors %}
             <span style="color: red;">[{{ error }}]</span>
             {% endfor %} 
+        </p>
+        <p>
+            {{ form.password2.label }}<br>
+            {{ form.password2(size=32) }}<br>
+            {% for error in form.password2.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
         </p>
         <p>{{ form.submit() }}</p>
     </form>

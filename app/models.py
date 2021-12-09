@@ -11,6 +11,13 @@ class User(UserMixin, db.Model):
     password_hash = db.Column(db.String(128))
     cpf = db.Column(db.String(14))
     pis = db.Column(db.String(128))
+    pais = db.Column(db.String(128))
+    cep = db.Column(db.String(100))
+    estado = db.Column(db.String(50))
+    cidade = db.Column(db.String(50))
+    rua = db.Column(db.String(80))
+    numero = db.Column(db.String(100))
+    complemento = db.Column(db.String(40))
 
     #SELECT username FROM USER WHERE email=login_entry OR cpf=login_entry OR pis=login_entry
 

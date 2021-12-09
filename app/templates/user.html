@@ -1,5 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
-<p> Oi, {{ username }} </p>
+
+<div class="cadastro_user">
+    <h1> Olá, {{ current_user.username }}, seja bem-vindo(a)!</h1>
+    <p>Informações Cadastrais:</p> 
+    <p> E-mail: {{ current_user.email }} </p>
+    <p> CPF: {{ current_user.cpf }} </p>
+    <p> PIS: {{ current_user.pis }} </p>
+    <p> País: {{ current_user.pais}} </p>
+    <p> CEP: {{ current_user.cep }} </p>
+    <p> UF: {{ current_user.estado }} </p>
+    <p> Rua: {{ current_user.rua }} </p>
+    <p> Número: {{ current_user.numero }} </p>
+    <p> Complemento: {{ current_user.complemento }} </p>
+</div>
+
 {% endblock %}

@@ -1,12 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
+
 <form action="" method="post" novalidate>
+    <h1>Olá, visitante! Seja bem-vindo(a)! </h1>
     {{ form.hidden_tag() }}
     <p>
-        {{ form.username.label }}<br>
-        {{ form.username(size=32) }}<br>
-        {% for error in form.username.errors %}
+        <p> Utilize seu e-mail, CPF ou PIS:</p>
+        {{ form.login.label }}<br>
+        {{ form.login(size=32) }}<br>
+        {% for error in form.login.errors %}
         <span style="color: red;">[{{ error }}]</span>
         {% endfor %}
     </p>
