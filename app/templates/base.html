@@ -11,9 +11,9 @@
             <a href="{{ url_for('login') }}">Home</a>
             <a href="{{ url_for('register') }}">Registre-se</a>
             {% else %}
-            <a href="{{ url_for('user_template') }}">Home</a>
+            <a href="{{ url_for('user_template') }}">Perfil</a>
             <a href="{{ url_for('logout') }}">Logout</a>
-            <a href="{{ url_for('edit') }}">Perfil</a>
+            <a href="{{ url_for('edit') }}">Editar Perfil</a>
             {% endif %}     
         </div>
         <hr>
