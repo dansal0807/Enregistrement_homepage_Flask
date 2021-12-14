@@ -69,8 +69,6 @@ def register():
         #Após comitarmos, a confirmação é vinda:
         flash('Agora você está registrado!')
         return redirect(url_for('login'))
-    else:
-        logged()
     return render_template('register.html', title='Register', form=form)
 
 @app.route('/edit', methods=['GET', 'POST'])
@@ -119,10 +117,6 @@ def edit():
 def logout():
     logout_user()
     return redirect(url_for('login'))
-
-@login_required
-def logged():
-    return flash('O cadastro não foi bem sucedido.')
 
 #dificilmente o usuário irá buscar seu endereço por /user, no entanto, caso o faça
 #o @login_required garante que ele esteja logado e, portanto, garante que todos os

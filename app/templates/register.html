@@ -5,6 +5,11 @@
     <form action="" method="post">
         <h1>Olá, visitante! Seja bem-vindo(a)! </h1>
         <h2>Formulário de Registro</h2>
+
+        {% for message in get_flashed_messages() %}
+        <div class="alert-error">Atenção: {{ message }}</div>
+        {% endfor %}
+    
         {{ form.hidden_tag() }}
         <p>
             {{ form.username.label }}<br>
