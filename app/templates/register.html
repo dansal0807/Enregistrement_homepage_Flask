@@ -7,7 +7,7 @@
         <h2>Formulário de Registro</h2>
 
         {% for message in get_flashed_messages() %}
-        <div class="alert-error">Atenção: {{ message }}</div>
+        <div class="alert-error"> {{ message }}</div>
         {% endfor %}
     
         {{ form.hidden_tag() }}

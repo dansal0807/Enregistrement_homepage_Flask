@@ -6,7 +6,7 @@
     <h1>Olá, visitante! Seja bem-vindo(a)! </h1>
 
     {% for message in get_flashed_messages() %}
-    <div class="alert-error">Error: {{ message }}</div>
+    <div class="alert-error"> {{ message }}</div>
     {% endfor %}
 
     {{ form.hidden_tag() }}
