@@ -1,11 +1,15 @@
-FROM tiangolo/uwsgi-nginx-flask:python3.6-alpine3.7
-RUN apk --update add bash nano
-ENV FLASK_APP=app.py
-ENV FLASK_RUN_HOST=0.0.0.0
-ENV STATIC_URL /static
-ENV STATIC_PATH /var/www/app/static
-COPY ./requirements.txt /var/www/requirements.txt
-RUN pip install -r /var/www/requirements.txt
-EXPOSE 5000
-COPY . .
-CMD ["flask", "run"]
+FROM alpine:3.7
+RUN apk add --no-cache --virtual .build-deps g++ python3-dev libffi-dev openssl-dev && \
+    apk add --no-cache --update python3 && \
+    pip3 install --upgrade pip setuptools
+RUN pip3 install pendulum service_identity
+
+WORKDIR /app
+
+COPY . /app
+
+RUN pip3 --no-cache-dir install -r requirements.txt                                                                            
+
+ENTRYPOINT  ["python3"]
+
+CMD ["app.py"]
