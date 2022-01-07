@@ -24,4 +24,4 @@ A entrada de login:
 O registro:
 ![registro](https://github.com/dansal0807/Projeto_cadastoflask/blob/main/imagens/registro.jpeg)
 
-
+O restante da aplicação é a edição dos conteúdos inseridos no registro.
