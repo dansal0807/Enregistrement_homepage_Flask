@@ -16,7 +16,7 @@ Como utilizá-la localmente?
 5. Em seguida, digite "flask run"
 6. navege até "localhost:5000" para acessar a aplicação.
 
-#A interface:
+A interface:
 ----------
 A entrada de login:
 ![Home](https://github.com/dansal0807/Projeto_cadastoflask/blob/main/imagens/home.jpeg)
